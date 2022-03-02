@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: helloworld
+  namespace: learnbyexample
+  labels:
+    k8s-app: helloworld
+spec:
+  ports:
+    - name: tcp-8080-8080-n566j
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    k8s-app: helloworld
+  type: ClusterIP

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: quarkus
+spec:
+  containers:
+  - name: quarkus
+    image: quay.io/danieloh30/todo-app-dev:1.0
+    ports:
+    - containerPort: 80

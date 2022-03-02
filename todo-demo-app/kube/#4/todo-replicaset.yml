@@ -1,0 +1,21 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: todo-quarkus-748dc5c57d
+  namespace: learnbyexample
+  labels:
+    k8s-app: todo-quarkus
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      k8s-app: todo-quarkus
+  template:
+    metadata:
+      name: todo-quarkus
+      labels:
+        k8s-app: todo-quarkus
+    spec:
+      containers:
+        - name: todo-quarkus
+          image: docker.io/danielon30/todo-quarkus:1.1

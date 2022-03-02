@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: helloworld
+  namespace: learnbyexample
+  labels:
+    k8s-app: helloworld
+spec:
+  containers:
+    - name: helloworld
+      image: docker.io/danielon30/helloworld:1.0

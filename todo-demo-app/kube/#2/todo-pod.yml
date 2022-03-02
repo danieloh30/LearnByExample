@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: quarkus
+spec:
+  containers:
+  - name: quarkus
+    image: docker.io/danielon30/todo-app:1.1
+    ports:
+    - containerPort: 80
